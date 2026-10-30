@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gajbhiye Kirana & General Store | गजबिये किराणा स्टोअर्स</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="pulse-dot"></span>
+        <span>⚡ <strong>30-Minute Free Home Delivery</strong> on orders over ₹499 in Nagpur & local area!</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919876543210" class="top-link"><i class="fa-solid fa-phone"></i> Call: <strong>+91 98765 43210</strong></a>
+        <span class="divider">|</span>
+        <button id="admin-modal-btn" class="admin-pill-btn"><i class="fa-solid fa-store"></i> Store Manager / Add Item</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header sticky-header">
+    <div class="container header-container">
+      <!-- Logo & Marathi Subtitle -->
+      <a href="#" class="brand-logo" onclick="resetFilter(); return false;">
+        <div class="brand-icon-box">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        <div class="brand-text">
+          <span class="store-name">Gajbhiye <span class="highlight">Kirana</span></span>
+          <span class="store-marathi">गजबिये किराणा आणि जनरल स्टोअर्स</span>
+        </div>
+      </a>
+
+      <!-- Pincode / Location Badge -->
+      <div class="delivery-location">
+        <i class="fa-solid fa-location-dot location-icon"></i>
+        <div class="location-info">
+          <span class="location-label">Express Delivery in <strong>30 Mins</strong></span>
+          <span class="location-name">Nagpur Central • 440001 <i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search dals, atta, ghee, spices, tea (e.g. Toor Dal, हळद, Fortune)..." autocomplete="off">
+        <button id="clear-search-btn" class="clear-btn" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+        <div id="search-suggestions" class="search-suggestions-dropdown"></div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="header-actions">
+        <a href="https://wa.me/919876543210?text=Namaste%20Gajbhiye%20Kirana,%20I%20want%20to%20order%20groceries" target="_blank" class="action-btn wa-btn" title="Order on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="btn-text">WhatsApp</span>
+        </a>
+
+        <button id="cart-btn" class="action-btn cart-header-btn">
+          <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-badge" class="cart-badge">0</span>
+          </div>
+          <div class="cart-info">
+            <span class="cart-label">My Cart</span>
+            <span id="cart-header-total" class="cart-total">₹0</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Navigation Bar -->
+  <nav class="sub-nav">
+    <div class="container sub-nav-container">
+      <div class="nav-pills" id="section-nav-pills">
+        <button class="nav-pill active" data-section="all"><i class="fa-solid fa-grip"></i> All Sections</button>
+        <button class="nav-pill" data-section="bestsellers"><i class="fa-solid fa-fire text-orange"></i> Today's Bestsellers</button>
+        <button class="nav-pill" data-section="daily-deals"><i class="fa-solid fa-bolt text-yellow"></i> Lightning Deals</button>
+        <button class="nav-pill" data-section="staples"><i class="fa-solid fa-wheat-awn text-green"></i> Kitchen Staples</button>
+        <button class="nav-pill" data-section="featured"><i class="fa-solid fa-star text-gold"></i> Gajbhiye Specials</button>
+      </div>
+      <div class="store-timing-tag">
+        <i class="fa-regular fa-clock"></i> Open Today: <strong>7:00 AM - 10:30 PM</strong>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner with Promotional Offers -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-main-banner">
+        <div class="hero-content">
+          <span class="hero-badge">🌟 १००% शुद्ध आणि खात्रीशीर किराणा</span>
+          <h1>Gajbhiye Kirana Stores</h1>
+          <p class="hero-tagline">Daily Fresh Atta, Premium Dals, Pure Ghee, Fragrant Spices & Household Essentials at wholesale neighborhood rates!</p>
+          <div class="hero-features">
+            <div class="feature-tag"><i class="fa-solid fa-check-double"></i> Unpolished Dals</div>
+            <div class="feature-tag"><i class="fa-solid fa-truck-fast"></i> 30-Min Fast Delivery</div>
+            <div class="feature-tag"><i class="fa-solid fa-hand-holding-dollar"></i> Cash/UPI on Delivery</div>
+          </div>
+          <div class="hero-cta-group">
+            <a href="#catalog-section" class="btn-primary"><i class="fa-solid fa-bag-shopping"></i> Shop Groceries Now</a>
+            <div class="coupon-pill">
+              Use code: <strong>GAJBHIYE10</strong> for extra 10% OFF
+            </div>
+          </div>
+        </div>
+        <div class="hero-banner-art">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80" alt="Fresh Kirana Groceries" class="hero-img">
+        </div>
+      </div>
+
+      <!-- Quick Mini Promo Cards -->
+      <div class="hero-side-cards">
+        <div class="promo-card card-yellow" onclick="filterByPromo('atta-rice-grains')">
+          <div class="promo-info">
+            <span class="card-pill">Bestseller Deal</span>
+            <h3>Sharbati Atta & Basmati Rice</h3>
+            <p>Soft rotis & fragrant biryani rice</p>
+            <span class="promo-link">Order Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <i class="fa-solid fa-wheat-awn promo-bg-icon"></i>
+        </div>
+
+        <div class="promo-card card-green" onclick="filterByPromo('oils-ghee')">
+          <div class="promo-info">
+            <span class="card-pill">Pure Dairy</span>
+            <h3>Amul Cow Ghee & Edible Oils</h3>
+            <p>Save up to ₹55 per pack</p>
+            <span class="promo-link">View Oils & Ghee <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <i class="fa-solid fa-bottle-droplet promo-bg-icon"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Slider / Pills Grid -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Shop by Grocery Categories</h2>
+          <p class="section-subtitle">किराणा मालाचे विविध प्रकार (Select a section to browse)</p>
+        </div>
+        <button id="view-all-cats-btn" class="pill-outline-btn" onclick="resetFilter()">View All Categories</button>
+      </div>
+
+      <div class="categories-grid" id="categories-container">
+        <!-- Rendered dynamically from backend /api/categories -->
+        <div class="category-skeleton">Loading categories from Gajbhiye Kirana...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Highlight Sections (Bestsellers & Deals) -->
+  <section id="curated-sections" class="curated-sections-container">
+    <!-- Populated by JS via /api/sections -->
+  </section>
+
+  <!-- Main Product Catalog -->
+  <section id="catalog-section" class="catalog-section">
+    <div class="container">
+      <!-- Filter and Sort Header -->
+      <div class="catalog-toolbar">
+        <div class="toolbar-left">
+          <h2 id="catalog-title" class="section-title">All Kirana Products</h2>
+          <span id="product-count-badge" class="count-badge">Loading...</span>
+        </div>
+
+        <div class="toolbar-right">
+          <!-- Active filter tag -->
+          <div id="active-filter-badge" class="active-filter-pill" style="display: none;">
+            <span id="active-filter-text">All Items</span>
+            <button onclick="resetFilter()" title="Clear filter"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- In-Stock only filter -->
+          <label class="stock-toggle">
+            <input type="checkbox" id="instock-filter">
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">In-Stock Only</span>
+          </label>
+
+          <!-- Sorting -->
+          <div class="sort-wrapper">
+            <label for="sort-select"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort:</label>
+            <select id="sort-select" class="sort-dropdown">
+              <option value="featured">Featured / Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="discount">Highest Discount</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Product Name (A-Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Products injected dynamically from /api/products -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Fetching fresh grocery stock from Gajbhiye Kirana server...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Service Badges -->
+  <section class="trust-banner">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h4>100% Pure & Fresh</h4>
+          <p>Hand-cleaned dals, branded fresh oils & unadulterated spices</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <h4>Fast 30-45 Min Delivery</h4>
+          <p>Delivered direct from our neighborhood store to your door</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-wallet"></i></div>
+        <div>
+          <h4>Cash or UPI on Delivery</h4>
+          <p>Pay comfortably after checking your grocery packages</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-whatsapp"></i></div>
+        <div>
+          <h4>Easy WhatsApp Ordering</h4>
+          <p>Send your handwritten list directly on our store WhatsApp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-over Cart Drawer -->
+  <div id="cart-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h3>My Grocery Basket</h3>
+        <span id="drawer-items-count" class="drawer-count-badge">0 Items</span>
+      </div>
+      <button id="close-cart-btn" class="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="free-delivery-tracker">
+      <div class="tracker-text" id="free-delivery-msg">Add ₹499 for FREE Delivery!</div>
+      <div class="tracker-bar">
+        <div id="tracker-fill" class="tracker-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Cart Footer & Checkout Summary -->
+    <div class="cart-footer" id="cart-footer">
+      <!-- Promo Code Section -->
+      <div class="promo-code-box">
+        <div class="promo-input-wrapper">
+          <i class="fa-solid fa-ticket"></i>
+          <input type="text" id="promo-input" placeholder="Enter coupon (e.g. GAJBHIYE10)" uppercase>
+          <button id="apply-promo-btn" class="apply-btn">Apply</button>
+        </div>
+        <div id="promo-feedback" class="promo-msg"></div>
+      </div>
+
+      <!-- Bill Breakdown -->
+      <div class="bill-summary">
+        <div class="bill-row">
+          <span>Items Subtotal</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+        <div class="bill-row discount-row" id="promo-row" style="display: none;">
+          <span>Coupon Discount (<span id="summary-promo-code"></span>)</span>
+          <span id="summary-discount">-₹0</span>
+        </div>
+        <div class="bill-row">
+          <span>Delivery Charge</span>
+          <span id="summary-delivery">₹30</span>
+        </div>
+        <div class="bill-row savings-highlight" id="total-savings-row">
+          <span>Total Savings on MRP</span>
+          <span id="summary-savings">₹0</span>
+        </div>
+        <div class="bill-row grand-total-row">
+          <span>Final Payable</span>
+          <span id="summary-grand-total">₹0</span>
+        </div>
+      </div>
+
+      <button id="checkout-btn" class="btn-checkout">
+        <span>Proceed to Checkout</span>
+        <span id="checkout-price-btn">₹0 <i class="fa-solid fa-arrow-right"></i></span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-bag-shopping"></i> Complete Your Kirana Order</h3>
+        <button id="close-checkout-modal" class="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="checkout-form" class="checkout-form">
+        <div class="form-section">
+          <h4><i class="fa-solid fa-user"></i> Customer Delivery Details</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cust-name">Full Name *</label>
+              <input type="text" id="cust-name" required placeholder="e.g. Ramesh Gajbhiye">
+            </div>
+            <div class="form-group">
+              <label for="cust-phone">WhatsApp / Mobile Number *</label>
+              <input type="tel" id="cust-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cust-address">Complete Street Address (घर / फ्लॅट क्रमांक व रस्ता) *</label>
+            <textarea id="cust-address" required rows="2" placeholder="House/Flat No, Building, Colony or Street name"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cust-landmark">Landmark (जवळची खूण)</label>
+              <input type="text" id="cust-landmark" placeholder="Near Hanuman Mandir / School">
+            </div>
+            <div class="form-group">
+              <label for="cust-pincode">Area Pincode</label>
+              <input type="text" id="cust-pincode" value="440001" placeholder="440001">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h4><i class="fa-solid fa-truck-clock"></i> Delivery Time Preference</h4>
+          <div class="delivery-slot-selector">
+            <label class="slot-card">
+              <input type="radio" name="deliverySlot" value="Express Instant (Within 30-45 Minutes)" checked>
+              <div class="slot-details">
+                <strong>⚡ Express Delivery</strong>
+                <span>Today within 30-45 mins</span>
+              </div>
+            </label>
+            <label class="slot-card">
+              <input type="radio" name="deliverySlot" value="Evening Slot (6:00 PM - 8:30 PM)">
+              <div class="slot-details">
+                <strong>🌆 Evening Delivery</strong>
+                <span>Today (6:00 PM - 8:30 PM)</span>
+              </div>
+            </label>
+            <label class="slot-card">
+              <input type="radio" name="deliverySlot" value="Tomorrow Morning (7:30 AM - 10:00 AM)">
+              <div class="slot-details">
+                <strong>🌅 Tomorrow Morning</strong>
+                <span>Fresh morning delivery</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h4><i class="fa-solid fa-credit-card"></i> Payment Method</h4>
+          <div class="payment-methods">
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" checked>
+              <span>💵 Cash on Delivery (COD)</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="UPI / PhonePe / GPay on Delivery">
+              <span>📱 Scan UPI QR on Delivery (GPay / PhonePe / Paytm)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label for="order-note"><i class="fa-regular fa-comment-dots"></i> Special instructions for storekeeper (Optional)</label>
+          <input type="text" id="order-note" placeholder="e.g. Please bring small change / ring the bell twice">
+        </div>
+
+        <div class="checkout-actions">
+          <button type="button" class="btn-cancel" id="cancel-checkout-btn">Cancel</button>
+          <button type="submit" class="btn-confirm-order" id="confirm-order-btn">
+            <span>Confirm Order</span>
+            <span id="confirm-total-badge">₹0</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Modal -->
+  <div id="order-success-modal" class="modal-backdrop">
+    <div class="modal-card success-card">
+      <div class="success-icon-box">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>Order Placed Successfully!</h2>
+      <p class="marathi-quote">गजबिये किराणा स्टोअर्समध्ये तुमची ऑर्डर नोंदवली गेली आहे!</p>
+      
+      <div class="order-receipt-box" id="order-receipt-content">
+        <!-- Injected upon successful order -->
+      </div>
+
+      <div class="success-actions">
+        <a id="wa-share-order-btn" href="#" target="_blank" class="btn-whatsapp-order">
+          <i class="fa-brands fa-whatsapp"></i> Send Order to Gajbhiye Kirana WhatsApp
+        </a>
+        <button class="btn-primary" onclick="closeOrderSuccessModal()">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal (Quick View) -->
+  <div id="product-quick-view" class="modal-backdrop">
+    <div class="modal-card product-modal-card">
+      <button class="close-modal-btn" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="product-modal-grid" id="product-modal-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin / Add Product Modal (For Store Manager) -->
+  <div id="admin-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-plus-circle"></i> Add New Product to Gajbhiye Kirana</h3>
+        <button class="close-modal-btn" onclick="closeAdminModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="add-product-form" class="checkout-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="new-p-name">Product Name (English) *</label>
+            <input type="text" id="new-p-name" required placeholder="e.g. Sona Masoori Raw Rice">
+          </div>
+          <div class="form-group">
+            <label for="new-p-marathi">Product Name (मराठी) *</label>
+            <input type="text" id="new-p-marathi" required placeholder="e.g. सोना मसुरी तांदूळ">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="new-p-category">Category *</label>
+            <select id="new-p-category" required>
+              <option value="dals-pulses">Dals & Pulses (डाळी आणि कडधान्ये)</option>
+              <option value="atta-rice-grains">Atta, Rice & Grains (पीठ आणि धान्य)</option>
+              <option value="oils-ghee">Cooking Oils & Ghee (खाद्यतेल आणि तूप)</option>
+              <option value="spices-masalas">Spices & Masalas (मसाले)</option>
+              <option value="dairy-breakfast">Dairy & Breakfast (डेअरी)</option>
+              <option value="snacks-beverages">Tea, Snacks & Sweets (स्नॅक्स)</option>
+              <option value="cleaning-household">Cleaning & Household (घरगुती)</option>
+              <option value="dry-fruits-nuts">Dry Fruits & Nuts (सुका मेवा)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="new-p-section">Display Section</label>
+            <select id="new-p-section">
+              <option value="bestsellers">🔥 Today's Bestsellers</option>
+              <option value="daily-deals">⚡ Lightning Deals</option>
+              <option value="staples">🌾 Pure Kitchen Staples</option>
+              <option value="featured">🌟 Gajbhiye Special</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="new-p-price">Selling Price (₹) *</label>
+            <input type="number" id="new-p-price" required min="1" placeholder="e.g. 110">
+          </div>
+          <div class="form-group">
+            <label for="new-p-mrp">MRP Price (₹) *</label>
+            <input type="number" id="new-p-mrp" required min="1" placeholder="e.g. 135">
+          </div>
+          <div class="form-group">
+            <label for="new-p-unit">Unit / Weight *</label>
+            <input type="text" id="new-p-unit" required placeholder="e.g. 1 kg / 500g / 1L">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="new-p-brand">Brand</label>
+            <input type="text" id="new-p-brand" placeholder="e.g. Gajbhiye Select">
+          </div>
+          <div class="form-group">
+            <label for="new-p-badge">Offer Badge</label>
+            <input type="text" id="new-p-badge" placeholder="e.g. 15% OFF / Special Stock">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="new-p-image">Image URL</label>
+          <input type="url" id="new-p-image" placeholder="https://images.unsplash.com/... (optional)">
+        </div>
+
+        <div class="form-group">
+          <label for="new-p-desc">Product Description</label>
+          <textarea id="new-p-desc" rows="2" placeholder="Pure unadulterated high quality grains..."></textarea>
+        </div>
+
+        <div class="checkout-actions">
+          <button type="button" class="btn-cancel" onclick="closeAdminModal()">Cancel</button>
+          <button type="submit" class="btn-confirm-order">Save Product to Backend</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div>
+            <h3>Gajbhiye Kirana</h3>
+            <span>गजबिये किराणा आणि जनरल स्टोअर्स</span>
+          </div>
+        </div>
+        <p class="footer-desc">Your trusted neighborhood kirana store providing 100% clean, unadulterated grocery essentials, grains, pure ghee, and household goods at the best local rates.</p>
+        <div class="footer-badges">
+          <span><i class="fa-solid fa-award"></i> Trusted by 10,000+ Families</span>
+          <span><i class="fa-solid fa-leaf"></i> 100% Pure & Hygienic</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Store Sections</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="filterByCategory('dals-pulses'); return false;"><i class="fa-solid fa-chevron-right"></i> Dals & Pulses (डाळी)</a></li>
+          <li><a href="#" onclick="filterByCategory('atta-rice-grains'); return false;"><i class="fa-solid fa-chevron-right"></i> Atta, Rice & Poha (पीठ व तांदूळ)</a></li>
+          <li><a href="#" onclick="filterByCategory('oils-ghee'); return false;"><i class="fa-solid fa-chevron-right"></i> Pure Ghee & Cooking Oils (तूप आणि तेल)</a></li>
+          <li><a href="#" onclick="filterByCategory('spices-masalas'); return false;"><i class="fa-solid fa-chevron-right"></i> Everest & Daily Spices (मसाले)</a></li>
+          <li><a href="#" onclick="filterByCategory('snacks-beverages'); return false;"><i class="fa-solid fa-chevron-right"></i> Tea & Biscuits (चहा व बिस्किट)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact & Store Timing</h4>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-location-dot"></i> <strong>Gajbhiye Kirana Store</strong>, Main Market Chowk, Sitabuldi / Mahal, Nagpur, Maharashtra - 440001</p>
+          <p><i class="fa-solid fa-phone"></i> Helpline: <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Order: <a href="https://wa.me/919876543210" target="_blank">+91 98765 43210</a></p>
+          <p><i class="fa-regular fa-clock"></i> <strong>Timing:</strong> 7:00 AM – 10:30 PM (All 7 Days Open)</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Order Online or on WhatsApp</h4>
+        <p>Send your grocery list via photo or text message on WhatsApp for 30-min local doorstep delivery.</p>
+        <a href="https://wa.me/919876543210?text=Namaste%20Gajbhiye%20Kirana,%20please%20take%20my%20order" target="_blank" class="btn-whatsapp-footer">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <div class="payment-icons">
+          <span><i class="fa-brands fa-google-pay"></i> GPay</span>
+          <span><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+          <span><i class="fa-solid fa-qrcode"></i> UPI QR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2026 Gajbhiye Kirana & General Store. All rights reserved. आपले हक्काचे किराणा दुकान.</p>
+        <p>Crafted with pride for authentic Indian neighborhood shopping.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

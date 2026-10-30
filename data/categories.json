@@ -1,0 +1,74 @@
+[
+  {
+    "id": "all",
+    "name": "All Items",
+    "marathiName": "सर्व किराणा",
+    "icon": "fa-th-large",
+    "badge": "Popular",
+    "bannerBg": "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+  },
+  {
+    "id": "dals-pulses",
+    "name": "Dals & Pulses",
+    "marathiName": "डाळी आणि कडधान्ये",
+    "icon": "fa-bowl-rice",
+    "badge": "Fresh Stock",
+    "bannerBg": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+  },
+  {
+    "id": "atta-rice-grains",
+    "name": "Atta, Rice & Grains",
+    "marathiName": "पीठ, तांदूळ आणि धान्य",
+    "icon": "fa-wheat-awn",
+    "badge": "Bestsellers",
+    "bannerBg": "linear-gradient(135deg, #eab308 0%, #ca8a04 100%)"
+  },
+  {
+    "id": "oils-ghee",
+    "name": "Edible Oils & Ghee",
+    "marathiName": "खाद्यतेल आणि शुद्ध तूप",
+    "icon": "fa-bottle-droplet",
+    "badge": "Pure & Best",
+    "bannerBg": "linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"
+  },
+  {
+    "id": "spices-masalas",
+    "name": "Spices & Masalas",
+    "marathiName": "मसाले आणि खडे मसाले",
+    "icon": "fa-pepper-hot",
+    "badge": "Aromatic",
+    "bannerBg": "linear-gradient(135deg, #ec4899 0%, #be185d 100%)"
+  },
+  {
+    "id": "dairy-breakfast",
+    "name": "Dairy & Breakfast",
+    "marathiName": "डेअरी आणि सकाळचा नाश्ता",
+    "icon": "fa-mug-hot",
+    "badge": "Daily Fresh",
+    "bannerBg": "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+  },
+  {
+    "id": "snacks-beverages",
+    "name": "Tea, Snacks & Sweets",
+    "marathiName": "चहा, बिस्किटे आणि स्नॅक्स",
+    "icon": "fa-cookie-bite",
+    "badge": "Snack Time",
+    "bannerBg": "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)"
+  },
+  {
+    "id": "cleaning-household",
+    "name": "Cleaning & Home Care",
+    "marathiName": "स्वच्छता आणि घरगुती",
+    "icon": "fa-soap",
+    "badge": "Essential",
+    "bannerBg": "linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)"
+  },
+  {
+    "id": "dry-fruits-nuts",
+    "name": "Dry Fruits & Nuts",
+    "marathiName": "सुका मेवा आणि बदाम-काजू",
+    "icon": "fa-seedling",
+    "badge": "Premium",
+    "bannerBg": "linear-gradient(135deg, #f97316 0%, #c2410c 100%)"
+  }
+]

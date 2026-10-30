@@ -1,0 +1,117 @@
+[
+  {
+    "orderId": "GK-20261030-9625",
+    "date": "2026-10-30T13:06:58.032Z",
+    "customer": {
+      "name": "Smeet Gabhane",
+      "phone": "8856868799",
+      "address": "Om Nagar Plot NO 419 ,Dnyaneshwar Mandir ,Tiranga Square , Nagpur",
+      "landmark": "Dnyaneshwar Mandir",
+      "pincode": "440024"
+    },
+    "items": [
+      {
+        "id": "prod-11",
+        "name": "Fresh Cow Milk Pouch (Amul Taaza)",
+        "marathiName": "अमुल ताझा गाईचे ताजे दूध",
+        "unit": "500 ml",
+        "price": 28,
+        "mrp": 28,
+        "quantity": 1,
+        "itemTotal": 28
+      }
+    ],
+    "pricing": {
+      "subtotal": 28,
+      "promoDiscount": 0,
+      "promoCode": null,
+      "deliveryFee": 30,
+      "totalSavings": 0,
+      "grandTotal": 58
+    },
+    "paymentMethod": "Cash on Delivery (COD)",
+    "deliverySlot": "Tomorrow Morning (7:30 AM - 10:00 AM)",
+    "status": "Confirmed - Packing at Gajbhiye Kirana Store",
+    "note": ""
+  },
+  {
+    "orderId": "GK-20261030-7401",
+    "date": "2026-10-30T13:03:27.925Z",
+    "customer": {
+      "name": "Smeet Gabhane",
+      "phone": "8856868799",
+      "address": "Om Nagar Plot NO 419 ,Dnyaneshwar Mandir ,Tiranga Square , Nagpur",
+      "landmark": "Dnyaneshwar Mandir",
+      "pincode": "440024"
+    },
+    "items": [
+      {
+        "id": "prod-5",
+        "name": "Daawat Rozana Super Basmati Rice",
+        "marathiName": "दावत रोझाना सुपर बासमती तांदूळ",
+        "unit": "5 kg",
+        "price": 380,
+        "mrp": 450,
+        "quantity": 1,
+        "itemTotal": 380
+      }
+    ],
+    "pricing": {
+      "subtotal": 380,
+      "promoDiscount": 0,
+      "promoCode": null,
+      "deliveryFee": 30,
+      "totalSavings": 70,
+      "grandTotal": 410
+    },
+    "paymentMethod": "UPI / PhonePe / GPay on Delivery",
+    "deliverySlot": "Tomorrow Morning (7:30 AM - 10:00 AM)",
+    "status": "Confirmed - Packing at Gajbhiye Kirana Store",
+    "note": ""
+  },
+  {
+    "orderId": "GK-20261030-6995",
+    "date": "2026-10-30T12:56:53.274Z",
+    "customer": {
+      "name": "Anil Gajbhiye",
+      "phone": "9876543210",
+      "address": "Plot 42, Sitabuldi Main Road",
+      "landmark": "Near Hanuman Mandir",
+      "pincode": "440001"
+    },
+    "items": [
+      {
+        "id": "prod-1",
+        "name": "Tata Sampann Unpolished Toor Dal",
+        "marathiName": "टाटा संपन्न अनपॉलिश्ड तूर डाळ",
+        "unit": "1 kg",
+        "price": 165,
+        "mrp": 190,
+        "quantity": 2,
+        "itemTotal": 330
+      },
+      {
+        "id": "prod-4",
+        "name": "Amul Pure Cow Ghee Tin",
+        "marathiName": "अमुल शुद्ध गाईचे तूप",
+        "unit": "1 Litre",
+        "price": 620,
+        "mrp": 675,
+        "quantity": 1,
+        "itemTotal": 620
+      }
+    ],
+    "pricing": {
+      "subtotal": 950,
+      "promoDiscount": 95,
+      "promoCode": "GAJBHIYE10",
+      "deliveryFee": 0,
+      "totalSavings": 200,
+      "grandTotal": 855
+    },
+    "paymentMethod": "Cash on Delivery (COD)",
+    "deliverySlot": "Express Instant (Within 30-45 Minutes)",
+    "status": "Confirmed - Packing at Gajbhiye Kirana Store",
+    "note": ""
+  }
+]
